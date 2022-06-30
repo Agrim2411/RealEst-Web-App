@@ -23,7 +23,7 @@ const MongoDBStore = require("connect-mongo")(session);
 
 const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/zoo-review';
 // console.log(process.env.DB_URL);
-mongoose.connect('dbUrl', {
+mongoose.connect(dbUrl, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
@@ -137,7 +137,6 @@ app.use((req, res, next) => {
     res.locals.error = req.flash('error');
     next();
 })
-
 
 app.use('/', userRoutes);
 app.use('/zoos', zooRoutes)
