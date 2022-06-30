@@ -1,5 +1,5 @@
 const { zooSchema, reviewSchema } = require('./schemas.js');
-const ExpressError = require('./utils/ExpressError');
+const ExpressError = require('./Utils/ExpressError');
 const Zoo = require('./models/zoo');
 const Review = require('./models/review');
 

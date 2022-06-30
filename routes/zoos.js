@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const zoos = require('../controllers/zoos');
-const catchAsync = require('../utils/catchAsync');
+const catchAsync = require('../Utils/catchAsync');
 const { isLoggedIn, isAuthor, validateZoo } = require('../middleware');
 const multer = require('multer');
 const { storage } = require('../cloudinary');
